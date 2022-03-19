@@ -1,0 +1,31 @@
+int buttonPin = 7;
+int ledPin = 10;
+int estadoButton = 0;
+
+void setup(){
+  pinMode(10 , OUTPUT);
+  pinMode(7 , INPUT);
+}
+
+void loop(){
+  estadoButton = digitalRead(buttonPin);
+  if (estadoButton == LOW) {
+   piscaLed ();
+  }
+  else { 
+  (estadoButton == HIGH);
+    desligaLed ();
+  (estadoButton == LOW);
+  }
+}
+void piscaLed ()
+{
+ digitalWrite (10, HIGH);
+ delay (1000);
+}
+void desligaLed ()
+{
+  digitalWrite (10, HIGH);
+  digitalWrite (10, LOW);
+  delay (1000);
+}
