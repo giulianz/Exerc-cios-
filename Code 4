@@ -1,0 +1,26 @@
+int buttonPin = 7;
+int ledPin = 10;
+int estadoButton = 0;
+
+void setup(){
+  pinMode(ledPin , OUTPUT);
+  pinMode(buttonPin , INPUT);
+}
+
+void loop(){
+  estadoButton = digitalRead(buttonPin);
+  if (estadoButton == HIGH) {//Se estadoButton for igual a HIGH ou 1
+LedUm();
+  }
+  else { //Senão = estadoButton for igual a LOW ou 0
+    digitalWrite(ledPin, LOW);
+  }
+}
+
+void LedUm()
+{
+digitalWrite(10, HIGH);
+delay(500);
+digitalWrite(10, LOW);
+delay(500);  
+}
